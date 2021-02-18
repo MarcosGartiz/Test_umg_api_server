@@ -57,11 +57,6 @@ Consulted from the endpoint [https://us.blizzard.com/hearthstone/cards?locale=en
 <strong>Hearthstone Metadata</strong><br>
 My Hearthstone Metadata API [http://localhost:3000/Metadata/:type]<br>
 Consulted from the endpoint [https://us.api.blizzard.com/hearthstone/metadata/${req.params.type}?locale=en_US&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6]<br>
-To see just one category of information, include the category as part of the path as shown in the following examples:<br>
-https://us.api.blizzard.com/hearthstone/metadata?locale=en_US<br>
-https://us.api.blizzard.com/hearthstone/metadata/sets?locale=en_US<br>
-https://us.api.blizzard.com/hearthstone/metadata/classes?locale=en_US<br>
-https://us.api.blizzard.com/hearthstone/metadata/keywords?locale=en_US<br>
 
 |Parameter|Type|Value|Description|
 |---------|----|-----|-----------|
