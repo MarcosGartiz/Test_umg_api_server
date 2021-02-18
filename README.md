@@ -77,14 +77,16 @@ For locale we are going to need this particular value in must of the get methods
 <strong>Diablo 3 Act</strong><br>
   
 <strong>Diablo 3 Leaderboard</strong><br>
-Returns a the specified leaderboard for the specified season.<br>
+Returns a the specified leaderboard for the specified season.
+
 |Parameter|Type|Value|Description|
 |---------|----|-----|-----------|
 |region|String|      |The region of the data to retrieve|
 |season|int|1,2,3,4,5,6,7,8,9|The season which you want to extract the leaderboard|
 <br>
 <strong>Diablo 3 profile consult</strong><br>
-Returns the specific account profile.<br>
+Returns the specific account profile.
+
 |Parameter|Type|Value|Description|
 |---------|----|-----|-----------|
 |region|String||The region of the data to retrieve|
