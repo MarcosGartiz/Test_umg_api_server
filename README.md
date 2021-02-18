@@ -3,13 +3,13 @@ API server made for the cloud computing class at UMG
 Here's the documentation user should consult to use my API server.
 First, this block of code is used to import and required package
 //Importing packages
-`const express = require('express');   //Express` 
-`const morgan = require('morgan');     //Morgan`
-`const axios = require('axios');       //Axios`
 
-const { response } = require('express');
+<li>const express = require('express');   //Express </li>
+<li>const morgan = require('morgan');     //Morgan</li>
+<li>const axios = require('axios');       //Axios</li>
+<li>const { response } = require('express');</li>
 //Using packages
-const app=express();`
+const app=express();
 
 I initialize a var named PORT to get the port obtained by Heroku 
 //Set PORT heroku
@@ -47,7 +47,7 @@ The following information applies to search parameters used with the /hearthston
 <li>blizzard - Blizzard / Blizzcon card backs</li>
 <li>golden - Golden card backs</li>
 <li>events - Event card backs</li>
-
+</ul>
 
 
 
