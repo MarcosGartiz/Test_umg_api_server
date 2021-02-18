@@ -102,7 +102,52 @@ Returns the specific account profile.
 |:number|int|      |The number of the account.|
 <br>
 <strong>Post a new card</strong><br>
+my post expect a JSON file with the following params<br>
+
+ |Parameter|Type|Value|
+ |---------|----|-----|
+ |name|String||
+ |class|String||
+ |mana|String||
+ |dmg|String||
+ |hp|String||
+ <br>
+ <i>example<br>
+  {
+ "name": "Dark angel",<br>
+      "set": "rise of shadows",<Br>
+      "class":   "Mage",<Br>
+      "mana":   10,<Br>
+      "dmg":    12,<Br>
+      "hp":   10 </i>
+  }
+  <br>
 <strong>Post a new item</strong><br>
+ {
+     "name": "Bloodthirsty",
+      "type": "Melee",
+      "class":   "Barbarian",
+      "dmg":    1005,
+      "level":   50
+      
+  }
+  <br>
 <strong>Post a new account</strong><br>
+{
+    "name":     "MarcosGarcia",
+    "email":    "marcosgarciatiznado@gmail.com",
+    "password": 111555
+}
+<br>
 <strong>Post for assist</strong><br>
+{
+    "account":      "MarcosGartiz",
+    "password":     111555,
+    "question":     "Why do i have to power on my pc before start playing?"
+}
+<br>
 <strong>Post an Error</strong><br>
+{
+    "difficult":    "didn't found a post api to recollect"
+    
+}<br>
