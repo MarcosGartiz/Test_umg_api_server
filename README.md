@@ -33,11 +33,8 @@ Also important the different region host available<Br>
 |China|https://gateway.battlenet.com.cn/| zh_CN|
   <br>
 <strong>Hearthstone Card Backs</strong><br>
-My Cardbacks API [http://localhost:3000/hearthstone/cardbacks/:textfilter] consulted from the endpoint<br>
-[https://us.blizzard.com/hearthstone/cards?locale=en_US&textFilter=${req.params.textfilter}&access_token=]<br>
-
-The following information applies to search parameters used with the /hearthstone/cardbacks endpoint.<Br>
-
+My Cardbacks API [http://localhost:3000/hearthstone/cardbacks/:textfilter]<br>
+Consulted from the endpoint [https://us.blizzard.com/hearthstone/cards?locale=en_US&textFilter=${req.params.textfilter}&access_token=]<br>
 <ol>
 <li>Sort and Order functionality function the same as /hearthstone/cards.</li>
 <li>Card backs are updated as they are released.</li>
@@ -58,7 +55,9 @@ The following information applies to search parameters used with the /hearthston
 <li>events - Event card backs</li>
 </ol>
 <strong>Hearthstone Metadata</strong><br>
-To retrieve all information about Hearthstone that is not specific to cards, use the /hearthstone/metadata endpoint. To see just one category of information, include the category as part of the path as shown in the following examples:<br>
+My Hearthstone Metadata API [http://localhost:3000/Metadata/:type]<br>
+Consulted from the endpoint [https://us.api.blizzard.com/hearthstone/metadata/${req.params.type}?locale=en_US&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6]<br>
+To see just one category of information, include the category as part of the path as shown in the following examples:<br>
 https://us.api.blizzard.com/hearthstone/metadata?locale=en_US<br>
 https://us.api.blizzard.com/hearthstone/metadata/sets?locale=en_US<br>
 https://us.api.blizzard.com/hearthstone/metadata/classes?locale=en_US<br>
@@ -75,8 +74,19 @@ For type, the valid values include sets, setGroups, types, rarities, classes, mi
 For locale we are going to need this particular value in must of the get methods, and the valid values are<br>
   
 <strong>Diablo 3 Act</strong><br>
-  
+My Diablo 3 Act API [http://localhost:3000/Diablo/:act/:locale] <br>
+Consulted from the endpoint [https://us.api.blizzard.com/d3/data/act/${req.params.act}?locale=${req.params.locale}&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6]<br>
+ Returns a single act by ID.
+ 
+|Parameter|Type|Value|Description|
+|---------|----|-----|-----------|
+|region|String|      |The region of the data to retrieve|
+|act|int|1,2,3,4,5  |The number of the act you want to extract|
+<br>
+
 <strong>Diablo 3 Leaderboard</strong><br>
+My Diablo 3 Leaderboard API [http://localhost:3000/Diablo/seasonLB/:season] <br>
+Consulted from the endpoint [https://us.api.blizzard.com/data/d3/season/${req.params.season}?access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6]<br>
 Returns a the specified leaderboard for the specified season.
 
 |Parameter|Type|Value|Description|
@@ -85,6 +95,8 @@ Returns a the specified leaderboard for the specified season.
 |season|int|1,2,3,4,5,6,7,8,9|The season which you want to extract the leaderboard|
 <br>
 <strong>Diablo 3 profile consult</strong><br>
+My Diablo 3 profile consult API [http://localhost:3000/Diablo/Profile/:name/:number] <br>
+Consulted from the endpoint [https://us.api.blizzard.com/d3/profile/${req.params.name}%23${req.params.number}/?locale=en_US&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6]<br>
 Returns the specific account profile.
 
 |Parameter|Type|Value|Description|
