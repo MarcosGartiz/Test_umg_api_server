@@ -2,10 +2,11 @@
 API server made for the cloud computing class at UMG
 Here's the documentation user should consult to use my API server.
 First, this block of code is used to import and required package
-`//Importing packages
-const express = require('express');   //Express 
-const morgan = require('morgan');     //Morgan
-const axios = require('axios');       //Axios
+//Importing packages
+`const express = require('express');   //Express` 
+`const morgan = require('morgan');     //Morgan`
+`const axios = require('axios');       //Axios`
+
 const { response } = require('express');
 //Using packages
 const app=express();`
@@ -19,10 +20,10 @@ then I set middleware to read JSON objs by using
 app.use(morgan('dev'));`
 
 
-##APIs from blizzard/n
+APIs from blizzard/n
 to use the blizzard api it may request OAuth to generate a client ID and secret token available for 24 hours 
-##GET
-###Hearthstone Card Backs
+GET
+Hearthstone Card Backs
 My Cardbacks API [http://localhost:3000/hearthstone/cardbacks/:textfilter] consulted from the endpoint
 [https://us.blizzard.com/hearthstone/cards?locale=en_US&textFilter=${req.params.textfilter}&access_token=]
 
