@@ -22,12 +22,12 @@ app.use(morgan('dev'));`
 
 APIs from blizzard/n
 to use the blizzard api it may request OAuth to generate a client ID and secret token available for 24 hours 
-GET
-Hearthstone Card Backs
-My Cardbacks API [http://localhost:3000/hearthstone/cardbacks/:textfilter] consulted from the endpoint
-[https://us.blizzard.com/hearthstone/cards?locale=en_US&textFilter=${req.params.textfilter}&access_token=]
 
-The following information applies to search parameters used with the /hearthstone/cardbacks endpoint.
+<strong>Hearthstone Card Backs</strong><br>
+My Cardbacks API [http://localhost:3000/hearthstone/cardbacks/:textfilter] consulted from the endpoint<br>
+[https://us.blizzard.com/hearthstone/cards?locale=en_US&textFilter=${req.params.textfilter}&access_token=]<br>
+
+The following information applies to search parameters used with the /hearthstone/cardbacks endpoint.<Br>
 
 <ol>
 <li>Sort and Order functionality function the same as /hearthstone/cards.</li>
@@ -48,7 +48,7 @@ The following information applies to search parameters used with the /hearthston
 <li>golden - Golden card backs</li>
 <li>events - Event card backs</li>
 </ol>
-#Hearthstone Metadata<br>
+<strong>Hearthstone Metadata</strong><br>
 To retrieve all information about Hearthstone that is not specific to cards, use the /hearthstone/metadata endpoint. To see just one category of information, include the category as part of the path as shown in the following examples:<br>
 https://us.api.blizzard.com/hearthstone/metadata?locale=en_US<br>
 https://us.api.blizzard.com/hearthstone/metadata/sets?locale=en_US<br>
