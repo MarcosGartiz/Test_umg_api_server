@@ -8,8 +8,7 @@ const { response } = require('express');
 const app = express();
 
 // Set PORT heroku
-
-let port= process.env.PORT || 8080
+//let port= process.env.PORT || 8080
 
 //Middleware to read json objs
 app.use(express.json());
