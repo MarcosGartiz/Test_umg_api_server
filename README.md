@@ -29,23 +29,24 @@ My Cardbacks API [http://localhost:3000/hearthstone/cardbacks/:textfilter] consu
 
 The following information applies to search parameters used with the /hearthstone/cardbacks endpoint.
 
-1.Sort and Order functionality function the same as /hearthstone/cards.
-2.Card backs are updated as they are released.
-3.textFilter will parse the card name and the description in the locale you are searching.
-4.cardBackCategory refers to the category of the card back. Categories include:
-5.base - Basic card backs
-6.achieve - Card backs obtainable through achievements
-7.fireside - Card backs related to Fireside Gatherings
-8.heroes - Hero card backs
-9.season - Seasonal card backs
-10.legend - Legend (via ranked play) card backs
-11.esports - Esport card backs
-12.game_license - Card backs connected to other Blizzard games
-13.promotion - Promotional card backs
-14.pre_purchase - Pre-purchase card backs
-15.blizzard - Blizzard / Blizzcon card backs
-16.golden - Golden card backs
-17.events - Event card backs
+<ul>
+<li>Sort and Order functionality function the same as /hearthstone/cards.</li>
+<li>Card backs are updated as they are released.</li>
+<li>textFilter will parse the card name and the description in the locale you are searching.</li>
+<li>cardBackCategory refers to the category of the card back. Categories include:</li>
+<li>base - Basic card backs</li>
+<li>achieve - Card backs obtainable through achievements</li>
+<li>fireside - Card backs related to Fireside Gatherings</li>
+<li>heroes - Hero card backs</li>
+<li>season - Seasonal card backs</li>
+<li>legend - Legend (via ranked play) card backs</li>
+<li>esports - Esport card backs</li>
+<li>game_license - Card backs connected to other Blizzard games</li>
+<li>promotion - Promotional card backs</li>
+<li>pre_purchase - Pre-purchase card backs</li>
+<li>blizzard - Blizzard / Blizzcon card backs</li>
+<li>golden - Golden card backs</li>
+<li>events - Event card backs</li>
 
 
 
