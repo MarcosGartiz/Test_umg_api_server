@@ -1,8 +1,8 @@
-//Importing packages
-const express = require('express');
-const morgan = require('morgan');
-const axios = require('axios');
-const { response } = require('express');
+	//Importing packages
+	const express = require('express');
+	const morgan = require('morgan');
+	const axios = require('axios');
+	const { response } = require('express');
 
 //Using packages
 const app = express();
@@ -38,7 +38,7 @@ app.post('/post', (req, res) => {
 	res.send(` id: ${aux} \n coleccion:${aux2}`);
 });
 
-app.post('/new/card', (req, res) => {
+app.post('/new/card', (req, res) => {			
 	console.log(req.body);
 	aux= req.body.name;
 	aux1 =  req.body.set;
@@ -89,10 +89,9 @@ app.post('/error', (req, res) => {
 });
 
 //Testing for Axios APIs
-//Get to request the cardbacks with a text filter integrated to optimize the search 
+//Get method to request the cardbacks with a text filter integrated to optimize the search 
 app.get('/hearthstone/cardbacks/:textfilter', (req, res) => {
-	const endpoint = `https://us.api.blizzard.com/hearthstone/cards?locale=en_US&textFilter=${req.params.textfilter}&access_token=USrSVK8sOrTcq26QC6A1asdNcEMmSMOmEa`;
-
+	const endpoint = `https://us.api.blizzard.com/hearthstone/cardbacks?locale=en_US&textFilter=${req.params.textfilter}&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6`;
 	axios
 		.get(endpoint)
 		.then(function (response) {
@@ -106,7 +105,7 @@ app.get('/hearthstone/cardbacks/:textfilter', (req, res) => {
 });
 
 app.get('/Diablo/SeasonLB/:season',(req, res) => {
-	const endpoint = `https://us.api.blizzard.com/data/d3/season/${req.params.season}?access_token=USrSVK8sOrTcq26QC6A1asdNcEMmSMOmEa `;
+	const endpoint = `https://us.api.blizzard.com/data/d3/season/${req.params.season}?access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6 `;
 
 	axios
 		.get(endpoint)
@@ -121,7 +120,7 @@ app.get('/Diablo/SeasonLB/:season',(req, res) => {
 });
 
 app.get('/Metadata/:type', (req, res) => {
-	const endpoint = `https://us.api.blizzard.com/hearthstone/metadata/${req.params.type}?locale=en_US&access_token=USrSVK8sOrTcq26QC6A1asdNcEMmSMOmEa `;
+	const endpoint = `https://us.api.blizzard.com/hearthstone/metadata/${req.params.type}?locale=en_US&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6 `;
 
 	axios
 		.get(endpoint)
@@ -134,8 +133,8 @@ app.get('/Metadata/:type', (req, res) => {
 			res.send(error);
 		});
 });
-app.get('/Diablo/Act/:locale', (req, res) => {
-	const endpoint = `https://us.api.blizzard.com/d3/data/act?locale=${req.params.locale}&access_token=USrSVK8sOrTcq26QC6A1asdNcEMmSMOmEa`;
+app.get('/Diablo/:act/:locale', (req, res) => {
+	const endpoint = `https://us.api.blizzard.com/d3/data/act/${req.params.act}?locale=${req.params.locale}&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6`;
 
 	axios
 		.get(endpoint)
@@ -150,8 +149,7 @@ app.get('/Diablo/Act/:locale', (req, res) => {
 });
 
 app.get('/Diablo/Profile/:name/:number', (req, res) => {
-	const endpoint = `https://us.api.blizzard.com/d3/profile/${req.params.name}%23${req.params.number}/?locale=en_US&access_token=USrSVK8sOrTcq26QC6A1asdNcEMmSMOmEa`;
-
+	const endpoint = `https://us.api.blizzard.com/d3/profile/${req.params.name}%23${req.params.number}/?locale=en_US&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6`;
 	axios
 		.get(endpoint)
 		.then(function (response) {
