@@ -107,10 +107,11 @@ my post expect a JSON file with the following params<br>
  |Parameter|Type|Value|
  |---------|----|-----|
  |name|String||
+ |set|String||
  |class|String||
- |mana|String||
- |dmg|String||
- |hp|String||
+ |mana|int||
+ |dmg|int||
+ |hp|int||
  <br>
  <i>example<br>
   {
@@ -123,31 +124,69 @@ my post expect a JSON file with the following params<br>
   }
   <br>
 <strong>Post a new item</strong><br>
+  
+my post expect a JSON file with the following params<br>
+
+ |Parameter|Type|Value|
+ |---------|----|-----|
+ |name|String||
+ |class|String||
+ |mana|String||
+ |dmg|int||
+ |level|int||
+  <br>
+  <i>example<br>
  {
-     "name": "Bloodthirsty",
-      "type": "Melee",
-      "class":   "Barbarian",
-      "dmg":    1005,
-      "level":   50
+     "name": "Bloodthirsty",<br>
+      "type": "Melee",<br>
+      "class":   "Barbarian",<br>
+      "dmg":    1005,<br>
+  "level":   50</i><br>
       
   }
   <br>
 <strong>Post a new account</strong><br>
+my post expect a JSON file with the following params<br>
+
+ |Parameter|Type|Value|
+ |---------|----|-----|
+ |name|String||
+ |email|String||
+ |password|String||
+ 
+<i>Example<br>
 {
-    "name":     "MarcosGarcia",
-    "email":    "marcosgarciatiznado@gmail.com",
-    "password": 111555
-}
+    "name":     "MarcosGarcia",<br>
+    "email":    "marcosgarciatiznado@gmail.com",<br>
+    "password": 111555<br>
+}</i>
 <br>
 <strong>Post for assist</strong><br>
+my post expect a JSON file with the following params<br>
+
+ |Parameter|Type|Value|
+ |---------|----|-----|
+ |account|String||
+ |password|String||
+ |quesiton|String||
+ 
+<i>Example<br>
 {
-    "account":      "MarcosGartiz",
-    "password":     111555,
-    "question":     "Why do i have to power on my pc before start playing?"
+    "account":      "MarcosGartiz",<br>
+    "password":     111555,<br>
+  "question":     "Why do i have to power on my pc before start playing?"<Br></i>
 }
 <br>
 <strong>Post an Error</strong><br>
+  My post expect a JSON file explaining an error
+  
+ |Parameter|Type|Value|
+ |---------|----|-----|
+ |Error|String||
+ <br>
+ <i>example<br>
+  
 {
-    "difficult":    "didn't found a post api to recollect"
+    "Error":    "didn't found a post api to recollect"</i>
     
 }<br>
