@@ -190,5 +190,5 @@ my post expect a JSON file with the following params<br>
     "num":    "500"</i>
 
 }<br>
-<strong>expected output</strong><br>
+<strong>non-expected output</strong><br>
 "error":  Your target is not a valid number. The number must be positive and less than 1000."<br>
