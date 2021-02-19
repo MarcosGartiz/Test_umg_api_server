@@ -37,8 +37,18 @@ app.post('/post', (req, res) => {
 	//Answer to client
 	res.send(` id: ${aux} \n coleccion:${aux2}`);
 });
-app.post('/Random/coin/flip',(req, res) =>{
-	console.log(req.body);
+app.post('/Random/dice/roll',(req, res) =>{
+	var aux = req.body.dice;
+	var URL = 'http://www.api.toys/api/dice_roll'+dice +rol;
+	
+	axios.post(URL,	{
+		dice: aux,
+	}).then((response)=>{
+		res.send(response.data)
+	}).catch((error) =>{
+		req.send(error);
+		console.error(error);
+	})
 });
 
 app.post('/rock/paper/scissors',function(req, res) {
@@ -53,7 +63,7 @@ app.post('/rock/paper/scissors',function(req, res) {
 		req.send(error);
 		console.error(error);
 	})
-})
+});
 app.post('/new/card', (req, res) => {			
 	console.log(req.body);
 	aux= req.body.name;
