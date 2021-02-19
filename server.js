@@ -39,12 +39,12 @@ app.post('/post', (req, res) => {
 });
 app.post('/Random/dice/roll',(req, res) =>{
 	var aux = req.body.dice;
-	var aux2 = req.body.rol;
-	var URL = 'http://www.api.toys/api/dice_roll'+dice +rol;
+	var aux2 = req.body.roll;
+	var URL = 'http://www.api.toys/api/dice_roll'+dice;
 	
 	axios.post(URL,	{
 		dice: aux,
-		rol:aux2,
+		roll:aux2,
 	}).then((response)=>{
 		res.send(response.data)
 	}).catch((error) =>{
