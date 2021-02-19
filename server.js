@@ -96,12 +96,10 @@ app.post('/solve-sum',function(req, res) {
 
 app.post('/dial/code',function(req, res) {
 	var aux = req.body.alpha2;
-	var aux2 = req.body.numeric;
-	var URL = 'https://api.toys/api/dialing_codes/'+aux +aux2;
+	var URL = 'https://api.toys/api/dialing_codes/'+aux ;
 	
 	axios.post(URL,	{
 		alpha2: aux,
-		numeric: aux2,
 	}).then((response)=>{
 		res.send(response.data)
 	}).catch((error) =>{
