@@ -125,11 +125,12 @@ my post expect a JSON file with the following params<br>
   <br>
   <strong>expected output</strong><br>
   {<br>
-  name: 'Bloodthirsty',<br>
-  type: 'Melee',<Br>
-  class: 'Barbarian',<Br>
-  dmg: 1005,<br>
-  level: 50<br>
+    Name: Dark angel<br>
+    Set: rise of shadows <br>
+    Class:Mage<Br>
+    Mana Cost: 10 <Br>
+    Attack: 12 <br>
+    Health: 10<Br>
 }
 <strong>Post a new item</strong><br>
 
@@ -149,9 +150,16 @@ my post expect a JSON file with the following params<br>
       "type": "Melee",<br>
       "class":   "Barbarian",<br>
       "dmg":    1005,<br>
-  "level":   50</i><br>
-
+      "level":   50</i><br>
   }
+    <strong>expected output</strong><br>
+  {<br>
+  name: 'Bloodthirsty',<br>
+  type: 'Melee',<Br>
+  class: 'Barbarian',<Br>
+  dmg: 1005,<br>
+  level: 50<br>
+}
   <br>
 <strong>Post a new account</strong><br>
 my post expect a JSON file with the following params<br>
@@ -168,6 +176,10 @@ my post expect a JSON file with the following params<br>
     "email":    "marcosgarciatiznado@gmail.com",<br>
     "password": 111555<br>
 }</i>
+<strong>expected output</strong><br>
+Name: MarcosGarcia<br>
+email: marcosgarciatiznado@gmail.com<br>
+Password:<br>
 <br>
 <strong>Post for assist</strong><br>
 my post expect a JSON file with the following params<br>
@@ -185,6 +197,11 @@ my post expect a JSON file with the following params<br>
   "question":     "Why do i have to power on my pc before start playing?"<Br></i>
 }
 <br>
+<strong>expected output</strong><br>
+Account: MarcosGartiz<br>
+Password:<Br>
+Question:Why do i have to power on my pc before start playing?<br>
+
 <strong>Post an Error</strong><br>
   My post expect a JSON file explaining an error
 
@@ -198,3 +215,5 @@ my post expect a JSON file with the following params<br>
     "Error":    "didn't found a post api to recollect"</i>
 
 }<br>
+<strong>expected output</strong><br>
+Difficult: didn't found a post api to recollect<br>
