@@ -37,7 +37,23 @@ app.post('/post', (req, res) => {
 	//Answer to client
 	res.send(` id: ${aux} \n coleccion:${aux2}`);
 });
+app.post('/Random/coin/flip',(req, res) =>{
+	console.log(req.body);
+});
 
+app.post('/rock/paper/scissors',function(req, res) {
+	var aux = req.body.player;
+	var URL = 'https://api.toys/api/rock_paper_scissors/'+aux;
+	
+	axios.post(URL,	{
+		player: aux,
+	}).then((response)=>{
+		res.send(response.data)
+	}).catch((error) =>{
+		req.send(error);
+		console.error(error);
+	})
+})
 app.post('/new/card', (req, res) => {			
 	console.log(req.body);
 	aux= req.body.name;
