@@ -37,9 +37,10 @@ app.post('/post', (req, res) => {
 	//Answer to client
 	res.send(` id: ${aux} \n coleccion:${aux2}`);
 });
-app.post('/Random/dice/roll',function(req, res) {
+
+app.post('/dice/roll',function(req, res) {
 	var aux = req.body.dice;
-	var URL = 'https://api.toys/api/dice_roll'+aux;
+	var URL = 'https://api.toys/api/dice_roll/'+aux;
 	
 	axios.post(URL,	{
 		dice: aux,
