@@ -67,12 +67,12 @@ Consulted from the endpoint [https://us.api.blizzard.com/hearthstone/metadata/${
 For region the valid values are us,eu,kr,tw,and cn. last one are independent because china have their own server, data and api.<br>
 For type, the valid values include sets, setGroups, types, rarities, classes, minionTypes, and keywords.<Br>
 For locale we are going to need this particular value in must of the get methods, and the valid values are<br>
-  
+
 <strong>Diablo 3 Act</strong><br>
 My Diablo 3 Act API [http://localhost:3000/Diablo/:act/:locale] <br>
 Consulted from the endpoint [https://us.api.blizzard.com/d3/data/act/${req.params.act}?locale=${req.params.locale}&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6]<br>
  Returns a single act by ID.
- 
+
 |Parameter|Type|Value|Description|
 |---------|----|-----|-----------|
 |region|String|      |The region of the data to retrieve|
@@ -124,7 +124,7 @@ my post expect a JSON file with the following params<br>
   }
   <br>
 <strong>Post a new item</strong><br>
-  
+
 my post expect a JSON file with the following params<br>
 
  |Parameter|Type|Value|
@@ -142,7 +142,7 @@ my post expect a JSON file with the following params<br>
       "class":   "Barbarian",<br>
       "dmg":    1005,<br>
   "level":   50</i><br>
-      
+
   }
   <br>
 <strong>Post a new account</strong><br>
@@ -153,7 +153,7 @@ my post expect a JSON file with the following params<br>
  |name|String||
  |email|String||
  |password|String||
- 
+
 <i>Example<br>
 {
     "name":     "MarcosGarcia",<br>
@@ -169,7 +169,7 @@ my post expect a JSON file with the following params<br>
  |account|String||
  |password|String||
  |quesiton|String||
- 
+
 <i>Example<br>
 {
     "account":      "MarcosGartiz",<br>
@@ -179,16 +179,14 @@ my post expect a JSON file with the following params<br>
 <br>
 <strong>Post an Error</strong><br>
   My post expect a JSON file explaining an error
-  
+
  |Parameter|Type|Value|
  |---------|----|-----|
  |Error|String||
  <br>
  <i>example<br>
-  
+
 {
     "Error":    "didn't found a post api to recollect"</i>
-    
+
 }<br>
-
-

@@ -150,6 +150,26 @@ app.get('/Diablo/:act/:locale', (req, res) => {
 
 app.get('/Diablo/Profile/:name/:number', (req, res) => {
 	const endpoint = `https://us.api.blizzard.com/d3/profile/${req.params.name}%23${req.params.number}/?locale=en_US&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6`;
+
+	axios
+		.get(endpoint)
+		.then(function (response) {
+			console.log(response.data);
+			res.send(response.data);
+		})
+		.catch(function (error) {
+			console.log(error);
+			res.send(error);
+		});
+});
+//Listen Server
+app.listen(3000, () => {
+	console.log('Running');
+});
+
+app.get('/Diablo/Profile/:name/:number', (req, res) => {
+	const endpoint = `https://us.api.blizzard.com/d3/profile/${req.params.name}%23${req.params.number}/?locale=en_US&access_token=USrSVK8sOrTcq26QC6A1asdNcEMmSMOmEa`;
+	
 	axios
 		.get(endpoint)
 		.then(function (response) {
