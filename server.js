@@ -163,6 +163,6 @@ app.get('/Diablo/Profile/:name/:number', (req, res) => {
 		});
 });
 //Listen Server
-app.listen(3000, () => {
+app.listen(port, () => {
 	console.log('Running');
 });
