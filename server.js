@@ -94,6 +94,19 @@ app.post('/solve-sum',function(req, res) {
 	})
 });
 
+app.post('/dial/code',function(req, res) {
+	var aux = req.body.dial;
+	var URL = 'https://api.toys/api/dialing_codes/'+aux;
+	
+	axios.post(URL,	{
+		dial: aux,
+	}).then((response)=>{
+		res.send(response.data)
+	}).catch((error) =>{
+		req.send(error);
+		console.error(error);
+	})
+});
 
 //Testing for Axios APIs
 //Get method to request the cardbacks with a text filter integrated to optimize the search 
