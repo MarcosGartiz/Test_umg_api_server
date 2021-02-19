@@ -67,11 +67,11 @@ app.post('/rock/paper/scissors',function(req, res) {
 });
 
 app.post('/worm-game/names',function(req, res) {
-	var aux = req.body.name;
+	var aux = req.body.num;
 	var URL = 'https://api.toys/api/worm_name/'+aux;
 	
 	axios.post(URL,	{
-		name: aux,
+		num: aux,
 	}).then((response)=>{
 		res.send(response.data)
 	}).catch((error) =>{
