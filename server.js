@@ -80,6 +80,21 @@ app.post('/worm-game/names',function(req, res) {
 	})
 });
 
+app.post('/solve-sum',function(req, res) {
+	var aux = req.body.sum;
+	var URL = 'https://api.toys/api/worm_name/'+aux;
+	
+	axios.post(URL,	{
+		sum: aux,
+	}).then((response)=>{
+		res.send(response.data)
+	}).catch((error) =>{
+		req.send(error);
+		console.error(error);
+	})
+});
+
+
 //Testing for Axios APIs
 //Get method to request the cardbacks with a text filter integrated to optimize the search 
 app.get('/hearthstone/cardbacks/:textfilter', (req, res) => {
