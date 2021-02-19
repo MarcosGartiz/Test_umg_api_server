@@ -23,7 +23,7 @@ Also important the different region host available<Br>
 |China|https://gateway.battlenet.com.cn/| zh_CN|
   <br>
 <strong>Hearthstone Card Backs</strong><br>
-My Cardbacks API [http://localhost:3000/hearthstone/cardbacks/:textfilter]<br>
+My Cardbacks API [https://test-umg.herokuapp.com/hearthstone/cardbacks/:textfilter]<br>
 Consulted from the endpoint [https://us.blizzard.com/hearthstone/cards?locale=en_US&textFilter=${req.params.textfilter}&access_token=]<br>
 
 |Parameter|Type|Value|Description|
@@ -33,7 +33,7 @@ Consulted from the endpoint [https://us.blizzard.com/hearthstone/cards?locale=en
 |TextFilter|String|      |text Filter will parse the card name and the description in the locale you are searching.|
 <br>
 <strong>Hearthstone Metadata</strong><br>
-My Hearthstone Metadata API [http://localhost:3000/Metadata/:type]<br>
+My Hearthstone Metadata API [https://test-umg.herokuapp.com//Metadata/:type]<br>
 Consulted from the endpoint [https://us.api.blizzard.com/hearthstone/metadata/${req.params.type}?locale=en_US&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6]<br>
 
 |Parameter|Type|Value|Description|
@@ -47,7 +47,7 @@ For type, the valid values include sets, setGroups, types, rarities, classes, mi
 For locale we are going to need this particular value in must of the get methods, and the valid values are<br>
 
 <strong>Diablo 3 Act</strong><br>
-My Diablo 3 Act API [http://localhost:3000/Diablo/:act/:locale] <br>
+My Diablo 3 Act API [https://test-umg.herokuapp.com/Diablo/:act/:locale] <br>
 Consulted from the endpoint [https://us.api.blizzard.com/d3/data/act/${req.params.act}?locale=${req.params.locale}&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6]<br>
  Returns a single act by ID.
 
@@ -58,7 +58,7 @@ Consulted from the endpoint [https://us.api.blizzard.com/d3/data/act/${req.param
 <br>
 
 <strong>Diablo 3 Leaderboard</strong><br>
-My Diablo 3 Leaderboard API [http://localhost:3000/Diablo/seasonLB/:season] <br>
+My Diablo 3 Leaderboard API [https://test-umg.herokuapp.com/Diablo/seasonLB/:season] <br>
 Consulted from the endpoint [https://us.api.blizzard.com/data/d3/season/${req.params.season}?access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6]<br>
 Returns a the specified leaderboard for the specified season.
 
@@ -68,7 +68,7 @@ Returns a the specified leaderboard for the specified season.
 |season|int|1,2,3,4,5,6,7,8,9|The season which you want to extract the leaderboard|
 <br>
 <strong>Diablo 3 profile consult</strong><br>
-My Diablo 3 profile consult API [http://localhost:3000/Diablo/Profile/:name/:number] <br>
+My Diablo 3 profile consult API [https://test-umg.herokuapp.com/Diablo/Profile/:name/:number] <br>
 Consulted from the endpoint [https://us.api.blizzard.com/d3/profile/${req.params.name}%23${req.params.number}/?locale=en_US&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6]<br>
 Returns the specific account profile.
 
