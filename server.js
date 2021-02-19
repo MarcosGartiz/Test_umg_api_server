@@ -95,11 +95,11 @@ app.post('/solve-sum',function(req, res) {
 });
 
 app.post('/dial/code',function(req, res) {
-	var aux = req.body.want;
+	var aux = req.body.dialcode;
 	var URL = 'https://api.toys/api/dialing_codes/'+aux;
 	
 	axios.post(URL,	{
-		want: aux,
+		dialcode: aux,
 	}).then((response)=>{
 		res.send(response.data)
 	}).catch((error) =>{
