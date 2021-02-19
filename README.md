@@ -104,7 +104,7 @@ my post expect a JSON file with the following params<br>
 
   }</i><br>
 
-    <strong>expected output</strong><br>
+  <strong>expected output</strong><br>
   <br>
  {
     "dice": "d20",<br>
