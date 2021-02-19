@@ -123,8 +123,8 @@ my post expect a JSON file with the following params<br>
       "hp":   10 </i>
   }
   <br>
-  expected output<br>
-  {
+  <strong>expected output</strong><br>
+  {<br>
   name: 'Bloodthirsty',<br>
   type: 'Melee',<Br>
   class: 'Barbarian',<Br>
