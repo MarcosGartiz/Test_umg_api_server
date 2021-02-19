@@ -25,25 +25,13 @@ Also important the different region host available<Br>
 <strong>Hearthstone Card Backs</strong><br>
 My Cardbacks API [http://localhost:3000/hearthstone/cardbacks/:textfilter]<br>
 Consulted from the endpoint [https://us.blizzard.com/hearthstone/cards?locale=en_US&textFilter=${req.params.textfilter}&access_token=]<br>
-<ol>
-<li>Sort and Order functionality function the same as /hearthstone/cards.</li>
-<li>Card backs are updated as they are released.</li>
-<li>textFilter will parse the card name and the description in the locale you are searching.</li>
-<li>cardBackCategory refers to the category of the card back. Categories include:</li>
-<li>base - Basic card backs</li>
-<li>achieve - Card backs obtainable through achievements</li>
-<li>fireside - Card backs related to Fireside Gatherings</li>
-<li>heroes - Hero card backs</li>
-<li>season - Seasonal card backs</li>
-<li>legend - Legend (via ranked play) card backs</li>
-<li>esports - Esport card backs</li>
-<li>game_license - Card backs connected to other Blizzard games</li>
-<li>promotion - Promotional card backs</li>
-<li>pre_purchase - Pre-purchase card backs</li>
-<li>blizzard - Blizzard / Blizzcon card backs</li>
-<li>golden - Golden card backs</li>
-<li>events - Event card backs</li>
-</ol>
+
+|Parameter|Type|Value|Description|
+|---------|----|-----|-----------|
+|region|String|    |The region of the data to retrieve|
+|locale|String|     |The locale to reflect in localized data|
+|TextFilter|String|      |text Filter will parse the card name and the description in the locale you are searching.|
+<br>
 <strong>Hearthstone Metadata</strong><br>
 My Hearthstone Metadata API [http://localhost:3000/Metadata/:type]<br>
 Consulted from the endpoint [https://us.api.blizzard.com/hearthstone/metadata/${req.params.type}?locale=en_US&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6]<br>
