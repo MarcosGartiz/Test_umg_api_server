@@ -37,7 +37,7 @@ app.post('/post', (req, res) => {
 	//Answer to client
 	res.send(` id: ${aux} \n coleccion:${aux2}`);
 });
-app.post('/Random/dice/roll',(req, res) =>{
+app.post('/Random/dice/roll',function(req, res) {
 	var aux = req.body.dice;
 	var URL = 'http://www.api.toys/api/dice_roll'+aux;
 	
