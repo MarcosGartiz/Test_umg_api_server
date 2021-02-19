@@ -39,7 +39,7 @@ app.post('/post', (req, res) => {
 });
 app.post('/Random/dice/roll',function(req, res) {
 	var aux = req.body.dice;
-	var URL = 'https://www.api.toys/api/dice_roll'+aux;
+	var URL = 'https://api.toys/api/dice_roll'+aux;
 	
 	axios.post(URL,	{
 		dice: aux,
