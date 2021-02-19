@@ -65,54 +65,19 @@ app.post('/rock/paper/scissors',function(req, res) {
 		console.error(error);
 	})
 });
-app.post('/new/card', (req, res) => {			
-	console.log(req.body);
-	aux= req.body.name;
-	aux1 =  req.body.set;
-	aux2= req.body.class;
-	aux3 =  req.body.mana;
-	aux4= req.body.dmg;
-	aux5 =  req.body.hp;
-	//Answer to client
-	res.send(`Name: ${aux}\n Set: ${aux1} \n Class:${aux2}\n Mana Cost:${aux3} \n Attack: ${aux4} \n Health: ${aux5}`);
-});
 
-app.post('/new/item', (req, res) => {
-	console.log(req.body);
-	aux= req.body.name;
-	aux1 =  req.body.type;
-	aux2= req.body.class;
-	aux3 =  req.body.dmg;
-	aux4 =  req.body.level;
-	//Answer to client
-	res.send(`Name: ${aux}\n Type: ${aux1} \n Class:${aux2}\n Damage:${aux3} \n Level: ${aux4}`);
-});
-
-app.post('/new/account', (req, res) => {
-	console.log(req.body);
-	aux= req.body.name;
-	aux1 =  req.body.email;
-	aux2= req.body.password;
-	aux3 =  req.body.confirm;
+app.post('/worm-game/names',function(req, res) {
+	var aux = req.body.name;
+	var URL = 'https://api.toys/api/worm_name/'+aux;
 	
-	//Answer to client
-	res.send(`Name: ${aux}\n email: ${aux1} \n Password: \n `);
-});
-
-app.post('/assist', (req, res) => {
-	console.log(req.body);
-	aux= req.body.account;
-	aux1 =  req.body.password;
-	aux2= req.body.question;
-	//Answer to client
-	res.send(`Account: ${aux}\n Password:  \n Question:${aux2} \n `);
-});
-
-app.post('/error', (req, res) => {
-	console.log(req.body);
-	aux= req.body.difficult;
-	//Answer to client
-	res.send(`Difficult: ${aux}\n `);
+	axios.post(URL,	{
+		name: aux,
+	}).then((response)=>{
+		res.send(response.data)
+	}).catch((error) =>{
+		req.send(error);
+		console.error(error);
+	})
 });
 
 //Testing for Axios APIs
