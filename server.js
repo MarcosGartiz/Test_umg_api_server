@@ -82,7 +82,7 @@ app.post('/worm-game/names',function(req, res) {
 
 app.post('/solve-sum',function(req, res) {
 	var aux = req.body.sum;
-	var URL = 'https://api.toys/api/worm_name/'+aux;
+	var URL = 'https://api.toys/api/solve_sum/'+aux;
 	
 	axios.post(URL,	{
 		sum: aux,
