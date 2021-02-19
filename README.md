@@ -123,6 +123,14 @@ my post expect a JSON file with the following params<br>
       "hp":   10 </i>
   }
   <br>
+  expected output<br>
+  {
+  name: 'Bloodthirsty',<br>
+  type: 'Melee',<Br>
+  class: 'Barbarian',<Br>
+  dmg: 1005,<br>
+  level: 50<br>
+}
 <strong>Post a new item</strong><br>
 
 my post expect a JSON file with the following params<br>
