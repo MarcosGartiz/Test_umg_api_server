@@ -102,14 +102,15 @@ my post expect a JSON file with the following params<br>
  {
      "dice": "20"<br>
 
-  }
+  }</i><br>
+
     <strong>expected output</strong><br>
   <br>
  {
-    "dice": "d20",
-    "rolls": [
-        18
-    ]
+    "dice": "d20",<br>
+    "rolls": [<br>
+        18<Br>
+    ]<Br>
 }
   <br>
 <strong>Rock,Paper and Scissors</strong><br>
@@ -125,13 +126,13 @@ my post expect a JSON file with the following params<br>
  {
      "name": "Rock"<br>
 
-  }
+  }</i><br>
     <strong>expected output</strong><br>
   {<br>
-    "cpu": "rock",
-    "player": "rock",
-    "winner": "draw",
-    "move": ""
+    "cpu": "rock",<br>
+    "player": "rock",<Br>
+    "winner": "draw",<Br>
+    "move": ""<BR>
 }
   <br>
 <strong>Dial Code</strong><br>
@@ -143,13 +144,13 @@ my post expect a JSON file with the following params<br>
 <br>
 <i>Example<br>
  {
-    "dialcode": "1"
+    "dialcode": "1"<br>
   }
-</i>
+</i><br>
 <strong>expected output</strong><br>
 {
-    "dialcode": "1",
-    "label": "United States"
+    "dialcode": "1",<Br>
+    "label": "United States"<Br>
 }
 <br>
 <strong>Worms game names request</strong><br>
@@ -163,8 +164,8 @@ my post expect a JSON file with the following params<br>
    {
     "name":     "5"<br>
 
-}
-<br>
+}</i><br>
+
 <strong>expected output</strong><br>
 {
     "results": [<br>
