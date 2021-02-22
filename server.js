@@ -111,7 +111,7 @@ app.post('/dial/code',function(req, res) {
 //Testing for Axios APIs
 //Get method to request the cardbacks with a text filter integrated to optimize the search 
 app.get('/hearthstone/cardbacks/:textfilter', (req, res) => {
-	const endpoint = `https://us.api.blizzard.com/hearthstone/cardbacks?locale=en_US&textFilter=${req.params.textfilter}&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6`;
+	const endpoint = `https://us.api.blizzard.com/hearthstone/cardbacks?locale=en_US&textFilter=${req.params.textfilter}&access_token=US2BRG3X94TMag6Imt7RZJhgOPtcPONZXC`;
 	axios
 		.get(endpoint)
 		.then(function (response) {
@@ -125,7 +125,7 @@ app.get('/hearthstone/cardbacks/:textfilter', (req, res) => {
 });
 
 app.get('/Diablo/SeasonLB/:season',(req, res) => {
-	const endpoint = `https://us.api.blizzard.com/data/d3/season/${req.params.season}?access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6 `;
+	const endpoint = `https://us.api.blizzard.com/data/d3/season/${req.params.season}?access_token=US2BRG3X94TMag6Imt7RZJhgOPtcPONZXC `;
 
 	axios
 		.get(endpoint)
@@ -140,7 +140,7 @@ app.get('/Diablo/SeasonLB/:season',(req, res) => {
 });
 
 app.get('/Metadata/:type', (req, res) => {
-	const endpoint = `https://us.api.blizzard.com/hearthstone/metadata/${req.params.type}?locale=en_US&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6 `;
+	const endpoint = `https://us.api.blizzard.com/hearthstone/metadata/${req.params.type}?locale=en_US&access_token=US2BRG3X94TMag6Imt7RZJhgOPtcPONZXC `;
 
 	axios
 		.get(endpoint)
@@ -154,7 +154,7 @@ app.get('/Metadata/:type', (req, res) => {
 		});
 });
 app.get('/Diablo/:act/:locale', (req, res) => {
-	const endpoint = `https://us.api.blizzard.com/d3/data/act/${req.params.act}?locale=${req.params.locale}&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6`;
+	const endpoint = `https://us.api.blizzard.com/d3/data/act/${req.params.act}?locale=${req.params.locale}&access_token=US2BRG3X94TMag6Imt7RZJhgOPtcPONZXC`;
 
 	axios
 		.get(endpoint)
@@ -169,7 +169,7 @@ app.get('/Diablo/:act/:locale', (req, res) => {
 });
 
 app.get('/Diablo/Profile/:name/:number', (req, res) => {
-	const endpoint = `https://us.api.blizzard.com/d3/profile/${req.params.name}%23${req.params.number}/?locale=en_US&access_token=USfZNBuPjJt45vKlYyeq7uhzARUGJ2QnR6`;
+	const endpoint = `https://us.api.blizzard.com/d3/profile/${req.params.name}%23${req.params.number}/?locale=en_US&access_token=US2BRG3X94TMag6Imt7RZJhgOPtcPONZXC`;
 
 	axios
 		.get(endpoint)
